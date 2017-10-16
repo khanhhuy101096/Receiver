@@ -16,6 +16,17 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        
+        <service android:name=".MyService"/>
+
+        <receiver android:name="MyReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.example.khanhuy.CUSTOM_INTENT"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
